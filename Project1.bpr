@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Project1.exe"/>
+    <OBJFILES value="Project1.obj Unit1.obj HttpDownload.obj DownloadTask.obj InstallUpdate.obj 
+      UpdaterForm.obj MyLog.obj oad\BaseDb.obj SendMesgToChild.obj 
+      &quot;C:\Program Files\Borland\CBuilder6\Bin\GetServMesgThread.obj&quot; 
+      ..\HolleLibevent\HelloWorld\lib\SendFileToChild.obj threadpool.obj"/>
+    <RESFILES value="Project1.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm UpdaterForm.dfm"/>
+    <LIBFILES value="pthread\pthreadVC2.lib"/>
+    <LIBRARIES value="odac60.lib dac60.lib adortl.lib indy.lib bcbsmp.lib bdertl.lib VclSmp.lib 
+      vcldb.lib dbrtl.lib vclx.lib tmsc6.lib inet.lib xmlrtl.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib xmlrtl.lib inet.lib tmsc6.lib vclx.lib dbrtl.lib vcldb.lib 
+      VclSmp.lib bdertl.lib bcbsmp.lib indy.lib adortl.lib dac60.lib odac60.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      bcb2kaxserver.bpi cxLibraryVCLC6.bpi dxThemeC6.bpi cxEditorsVCLC6.bpi 
+      cxDataC6.bpi cxExtEditorsVCLC6.bpi dxmdsC6.bpi cxPageControlVCLC6.bpi 
+      cxGridC6.bpi cxExportVCLC6.bpi dxComnC6.bpi dxdbtrC6.bpi dxtrmdC6.bpi 
+      dxBarC6.bpi dxBarExtItemsC6.bpi dxRibbonC6.bpi cxVerticalGridVCLC6.bpi 
+      tmsc6.bpi VclSmp.bpi tmsxlsc6.bpi dclusr.bpi"/>
+    <PATHCPP value=".;oad;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;..\HolleLibevent\HelloWorld\lib"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Project1.cpp"/>
+    <INCLUDEPATH value="..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;oad;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread"/>
+    <LIBPATH value="..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6&quot;;oad;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;&quot;C:\Users\Chen-Liu\Desktop\grid&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -D_DEBUG -I..\HolleLibevent\HelloWorld\lib 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot; 
+      -Ioad -I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot; 
+      -IC:\Users\Chen-Liu\Desktop\grid -I$(BCB)\include -I$(BCB)\include\vcl 
+      -Ipthread -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWD 
+      -tWM -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Project1.res" FORMNAME="" UNITNAME="Project1.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Project1.cpp" FORMNAME="" UNITNAME="Project1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="HttpDownload.cpp" FORMNAME="" UNITNAME="HttpDownload" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DownloadTask.cpp" FORMNAME="" UNITNAME="DownloadTask" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pthread\pthreadVC2.lib" FORMNAME="" UNITNAME="pthreadVC2.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="InstallUpdate.cpp" FORMNAME="" UNITNAME="InstallUpdate" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UpdaterForm.cpp" FORMNAME="Form2" UNITNAME="UpdaterForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MyLog.cpp" FORMNAME="" UNITNAME="MyLog" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="oad\BaseDb.cpp" FORMNAME="" UNITNAME="BaseDb" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SendMesgToChild.cpp" FORMNAME="" UNITNAME="SendMesgToChild" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C:\Program Files\Borland\CBuilder6\Bin\GetServMesgThread.cpp" FORMNAME="" UNITNAME="GetServMesgThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\HolleLibevent\HelloWorld\lib\SendFileToChild.cpp" FORMNAME="" UNITNAME="SendFileToChild" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="threadpool.cpp" FORMNAME="" UNITNAME="threadpool" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=0
+Build=12
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2052
+CodePage=936
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.12
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=14
+Item0=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread
+Item1=oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source
+Item2=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread
+Item3=oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1
+Item4=oad;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread
+Item5=oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread
+Item6=C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread
+Item7=C:\Program Files\Borland\CBuilder6\Bin;C:\Users\Chen-Liu\Desktop\grid;..\自动更新3.1.1;..\自动更新2;QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;C:\TMS Component pack 5.5.4.1
+Item8=..\自动更新2;QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;C:\TMS Component pack 5.5.4.1
+Item9=QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;C:\TMS Component pack 5.5.4.1
+Item10=QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;pthread;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread
+Item11=QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread
+Item12=QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder6\Source\Indy10
+Item13=QRcode;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=14
+Item0=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item1=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item2=oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6
+Item3=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item4=C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source;oad;C:\Program Files\Borland\CBuilder6\Bin;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item5=oad;C:\Program Files\Borland\CBuilder6\Bin;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item6=C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread
+Item7=C:\Program Files\Borland\CBuilder6\Bin;C:\Users\Chen-Liu\Desktop\grid;..\自动更新3.1.1;..\自动更新2;QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;pthread;C:\TMS Component pack 5.5.4.1
+Item8=..\自动更新2;QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;pthread;C:\TMS Component pack 5.5.4.1
+Item9=QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;pthread;C:\TMS Component pack 5.5.4.1
+Item10=QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread;pthread
+Item11=QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10;C:\Documents and Settings\Administrator\桌面\自动更新\pthread
+Item12=QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder6\Source\Indy10
+Item13=QRcode;$(BCB)\Projects\Lib;C:\Documents and Settings\Administrator\桌面\DLL;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=2
+Item0=$(BCB)\source\vcl;C:\TMS Component pack 5.5.4.1\
+Item1=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl;C:\TMS Component pack 5.5.4.1\
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=192.168.0.246
+RemotePath=E:\oratest\Project1.exe
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=1
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater><Description>信号设备大数据平台</Description><Updater><Url>http://192.168.0.245:190/downfile/autoupdate/信号设备大数据平台/襄阳电务段</Url><LastUpdateTime>2017-7-19 14:37:18</LastUpdateTime></Updater><Application><Run>SigUpdateLive.exe</Run><Ver>20170713112549</Ver><ProVer>1.0.0.32</ProVer></Application><Files><File name="信号设备大数据平台1.0.0.32.exe" dir="" options="更新包"/><File name="SigUpdateLive.exe" dir="" options="替换并运行"/><File name="2《信号专业信息平台》使用说明书1.0.0.31.doc" dir="" options="替换"/></Files></AutoUpdater>

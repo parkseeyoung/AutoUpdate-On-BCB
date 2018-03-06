@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="gb2312"?>
+<AutoUpdater><Description>工区铁路信号信息化平台</Description><Updater><Url>http://192.168.0.245:190/downfile/autoupdate/工区铁路信号信息化平台/襄阳电务段</Url><LastUpdateTime>2017-7-31 9:45:31</LastUpdateTime></Updater><Application><Run>SigUpdateLive.exe</Run><Ver>20170731094501</Ver><ProVer>1.0.0.3</ProVer></Application><Files><File name="SigUpdateLive.exe" dir="" options="替换并运行"/><File name="工区铁路信号信息化平台更新包1.0.0.3.exe" dir="" options="更新包"/></Files></AutoUpdater>

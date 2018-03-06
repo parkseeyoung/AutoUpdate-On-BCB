@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+
+#ifndef ExceptLogH
+#define ExceptLogH
+//---------------------------------------------------------------------------
+#include <stdio.h>
+#include <vcl.h>
+#include "ScanUnit.h"
+void SaveLog(String path,String Msg)   //存错误信息的函数
+{
+    AnsiString name = FormatDateTime( "yyyy_mm_dd", Date() );
+    
+    AnsiString file = ExtractFilePath( Application->ExeName )+"log\\"+name+".log";
+    AnsiString str ="";
+    str=DateTimeToStr(Now()) +"  "+ Msg +"\n";
+    FILE *fp;
+    fp=fopen(file.c_str(),"a");
+    fputs(str.c_str(),fp);
+    fclose(fp);
+}
+#endif
