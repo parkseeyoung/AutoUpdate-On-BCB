@@ -134,12 +134,4 @@ void SendMessageToChild::setFileNames(TStringList * _filenames)
 //发送文件给下级服务器
 void SendMessageToChild::sendFile()
 {
-        vector<theFile*>files;
-        for(int i = 0 ; i<fileNames->Count ; i++)
-        {
-                AnsiString filepath = ExtractFilePath(Application->ExeName)+"uploadFile//"+fileNames[0][i];
-                theFile *tf = new theFile(fileNames[0][i],filepath,i);
-                files.push_back(tf);
-        }
-        SendFileToChild * ftc = new SendFileToChild(files,addr,true);
 }
