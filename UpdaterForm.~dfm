@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 524
-  Top = 287
+  Left = 315
+  Top = 231
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Form2'
@@ -1066,7 +1066,7 @@ object Form2: TForm2
     ParentFont = False
     ShineColor = clWhite
     TabOrder = 0
-    Version = '1.2.3.0'
+    Version = '1.2.3.1'
     OnClick = AdvGlassButton1Click
   end
   object AdvGlassButton2: TAdvGlassButton
@@ -1089,7 +1089,7 @@ object Form2: TForm2
     ParentFont = False
     ShineColor = clWhite
     TabOrder = 1
-    Version = '1.2.3.0'
+    Version = '1.2.3.1'
     OnClick = AdvGlassButton2Click
   end
 end

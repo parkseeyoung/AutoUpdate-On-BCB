@@ -24,6 +24,7 @@
 #include <IdComponent.hpp>
 #include <IdTCPServer.hpp>
 #include <pthread.h>
+#include <windows.h>
 #define MAXSENDTHREADCOUNT 6
 
 //---------------------------------------------------------------------------
@@ -92,6 +93,12 @@ public:		// User declarations
     String m_code,m_parentCode;
 
     CBaseDb* bdb;
+private:
+    void makeVerDir(String ver);
+    //文件拷贝
+    void CopyFolder(String pathFrom,String pathTo);
+    //删除文件夹下的文件
+    void DeleteFolder(String srcPath);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;

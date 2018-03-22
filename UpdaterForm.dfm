@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 315
-  Top = 231
+  Left = 473
+  Top = 347
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Form2'

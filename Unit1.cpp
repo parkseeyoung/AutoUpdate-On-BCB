@@ -250,7 +250,6 @@ int TForm1::DownLoadFile(const char*url,const char*downloadname)
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
    softcount = 0;
-   
    Timer1->Enabled = false;
    //提示稍后更新
    String laterinipath = ExtractFilePath(Application->ExeName)+"InstallLater.ini";
@@ -648,7 +647,7 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
                 sendMessageToChild(_recvname ,_addr);
         }
 
-        //delete fileList;
+        delete fileList;
 }
 //---------------------------------------------------------------------------
 
@@ -667,7 +666,7 @@ int TForm1::dealWithUploadXml()
 {
         //弄清楚本质，文件都是发送的一样的，所以只要弄清楚该往哪里发就行了
         //通过Personinfo表
-        String softname,desciption;
+        String softname,desciption,ver;
         m_softname = "";
         //加载xml文件
         CoInitialize(NULL);
@@ -675,6 +674,7 @@ int TForm1::dealWithUploadXml()
         this->XMLDocument1->LoadFromFile("./uploadFile/UpdaterList.xml");
         this->XMLDocument1->Active = true;
 
+        //版本号在Application的Ver里面
 
         //清空接收单位列表
         recvList->Clear();
@@ -720,10 +720,83 @@ int TForm1::dealWithUploadXml()
                 {
                         _di_IXMLNode temp_node = fileNodeList->Nodes[i];
                         fileOpList->Append(temp_node->GetAttribute("options"));
-                }                
+                }
+                //找出application节点
+                _di_IXMLNode node_application = nodeList->FindNode("Application");
+                _di_IXMLNodeList applicationNodeList = node_application->GetChildNodes();
+                _di_IXMLNode temp_ver = applicationNodeList->FindNode("Ver");
+                ver = temp_ver->Text;
         }
+
         m_softname = softname;
-        recvList->SaveToFile("recvList.txt");
+        //根据ver新建一个文件夹,并转移文件
+        makeVerDir(ver);
+}
+void TForm1::makeVerDir(String ver)
+{
+        String verPath = ".\\downfile\\autoupdate\\"+m_softname+"\\"+m_dwname+"\\"+ver;
+        CopyFolder(".\\uploadFile",verPath);
+        //然后把xml文件放到外面复制替换，在把uploadFile删除就行了
+        String xmlFilePath = ".\\downfile\\autoupdate\\"+m_softname+"\\"+m_dwname+"\\UpdaterList.xml";
+        CopyFile(".\\uploadFile\\UpdaterList.xml",xmlFilePath.c_str(),0);
+        DeleteFolder(".\\uploadFile");
+}
+//递归创建文件夹
+void TForm1::CopyFolder(String pathFrom,String pathTo)
+{
+        TSearchRec sr;
+        if(!DirectoryExists(pathFrom))
+        {
+                return;
+        }
+        if(!DirectoryExists(pathTo))
+        {
+                ForceDirectories(pathTo.c_str());
+        }
+        if (FindFirst(pathFrom + "//*.*", faAnyFile, sr) == 0)
+        {  
+                do{  
+                        try{  
+                                if ((sr.Attr & faDirectory) != 0){  
+                                      //folder  
+                                      if (sr.Name != "." && sr.Name != ".."){  
+                                        CopyFolder(pathFrom+"//"+sr.Name, pathTo+"//"+sr.Name);
+                                      }
+                                }else{  
+                                    //file  
+                                    CopyFile((pathFrom + "//" + sr.Name).c_str(),
+                                             (pathTo + "//" + sr.Name).c_str(),
+                                              0);  
+                                }  
+                        }catch(...){}  
+                } while (FindNext(sr) == 0);  
+                FindClose(sr);  
+        }
+}
+//删除文件
+void TForm1::DeleteFolder(String srcPath)
+{
+        TSearchRec sr;
+        if (!DirectoryExists(srcPath)){
+            return ;
+        }
+
+        if (FindFirst(srcPath + "//*.*", faAnyFile, sr) == 0){
+                do{
+                        try{
+                                if ((sr.Attr & faDirectory) != 0){
+                                      //folder
+                                      if (sr.Name != "." && sr.Name != ".."){
+                                        DeleteFolder(srcPath+"//"+sr.Name);
+                                      }
+                                }else{
+                                    //file
+                                    DeleteFileA((srcPath + "//" + sr.Name).c_str());
+                                }
+                        }catch(...){}
+                } while (FindNext(sr) == 0);
+                FindClose(sr);
+        }
 }
 void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 {

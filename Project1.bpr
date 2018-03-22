@@ -45,14 +45,15 @@
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot; 
+    <IDLCFLAGS value="-src_suffix cpp -D_DEBUG -DEUREKALOG -DEUREKALOG_VER6 
+      -I&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot; 
       -I..\HolleLibevent\HelloWorld\lib 
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
       -I&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot; 
       -Ioad -I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; 
       -I&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot; 
       -IC:\Users\Chen-Liu\Desktop\grid -I$(BCB)\include -I$(BCB)\include\vcl 
-      -Ipthread -src_suffix cpp -D_DEBUG -DEUREKALOG -DEUREKALOG_VER6 -boa"/>
+      -Ipthread -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWD 
       -tWM -c"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
@@ -93,7 +94,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=0
-Build=12
+Build=13
 Debug=0
 PreRelease=0
 Special=0
@@ -105,7 +106,7 @@ CodePage=936
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.12
+FileVersion=1.0.0.13
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -170,7 +171,7 @@ RemoteHost=192.168.0.246
 RemotePath=E:\oratest\Project1.exe
 RemoteLauncher=
 RemoteCWD=
-RemoteDebug=1
+RemoteDebug=0
 
 [Compiler]
 ShowInfoMsgs=0
