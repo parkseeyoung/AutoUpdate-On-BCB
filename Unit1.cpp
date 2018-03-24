@@ -529,36 +529,32 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
         //如果有表则插入数据(文件列表)
         if(fileList)
         {
-                for(int index = 0 ; index < fileList->Count ; index ++)
-                {
-                        GUID uid;
-                        CoCreateGuid(&uid);
-                        String pguid = Sysutils::GUIDToString(uid) ;
-                        String isdelete = "0";
-                        String sudtime = Now();
-                        String synctime = "";
-                        //这里需要解析xml文件
-                        String servName = "fwq";
-                        String ip = getHostIP();
-                        String ver = "";
-                        String success = "是";
-                        String softname = m_softname;
-                        //编码
-                        m_code;
-                        //上级编码
-                        m_parentCode;
-                        //单位名称
-                        m_dwname;
+                GUID uid;
+                CoCreateGuid(&uid);
+                String pguid = Sysutils::GUIDToString(uid) ;
+                String isdelete = "0";
+                String sudtime = Now();
+                String synctime = "";
+                //这里需要解析xml文件
+                String servName = "fwq";
+                String ip = getHostIP();
+                String ver = "";
+                String success = "是";
+                String softname = m_softname;
+                //编码
+                m_code;
+                //上级编码
+                m_parentCode;
+                //单位名称
+                m_dwname;
 
-                        String p_sql = "insert into "+tableName + " VALUES('"+pguid+"',"+
-                        isdelete+",'"+sudtime+"','"+synctime+"','"+servName+"','"+
-                        ip+"','"+ver+"','"+success+"','"+softname+"','"+m_code+"','"+m_parentCode+
-                        "','"+m_dwname+"')";
-                        if (bdb->ToExecOracleSql(p_sql) == false)
-                        {
-                                //日志记录
-                                break;
-                        }
+                String p_sql = "insert into "+tableName + " VALUES('"+pguid+"',"+
+                isdelete+",'"+sudtime+"','"+synctime+"','"+servName+"','"+
+                ip+"','"+ver+"','"+success+"','"+softname+"','"+m_code+"','"+m_parentCode+
+                "','"+m_dwname+"')";
+                if (bdb->ToExecOracleSql(p_sql) == false)
+                {
+                        //日志记录
                 }
         }
 
