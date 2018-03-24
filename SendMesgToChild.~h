@@ -7,7 +7,6 @@
 #include <WinSock2.h>
 #include "pthread.h"
 #include "Unit1.h"
-#include "SendFileToChild.h"
 #pragma comment(lib,"ws2_32.lib")
 //---------------------------------------------------------------------------
 

@@ -36,6 +36,18 @@ String getHostIP()
         AnsiString sIPAddress;
         gethostname(Buffer,64);
         pHost = gethostbyname(Buffer);
+        int len = 0 ;
+        while(pHost->h_addr_list[len]!=NULL)
+        {
+          len++;
+        }
+        for(int i = 0 ; i<len ;i++)
+        {
+                sIPAddress = inet_ntoa(*(struct in_addr*)pHost->h_addr_list[i]);
+                //如果第三位是0
+                if(sIPAddress[9]=='0')
+                        return sIPAddress;
+        }
         sIPAddress = inet_ntoa(*(struct in_addr*)pHost->h_addr_list[0]);
         return sIPAddress;
 }
@@ -49,7 +61,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
     : TForm(Owner)
 {
         this->IdTCPServer1->Bindings->Add();
-        this->IdTCPServer1->Bindings->Items[0]->Port = 19999;
+        this->IdTCPServer1->Bindings->Items[0]->Port = 7801;
         this->IdTCPServer1->Bindings->Items[0]->IP = getHostIP();
         this->IdTCPServer1->Active = true;
         String mesg ("服务器开启成功！");
@@ -369,7 +381,7 @@ void __fastcall TForm1::Button1Click(TObject *Sender)
 void __fastcall TForm1::Timer1Timer(TObject *Sender)
 {
     Button1->Click();
-    Timer1->Interval = 7200000;
+    Timer1->Interval = 240000;
 }
 //---------------------------------------------------------------------------
 

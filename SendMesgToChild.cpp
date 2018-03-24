@@ -40,7 +40,7 @@ __fastcall SendMessageToChild::SendMessageToChild(String _recvName,String _addr,
         //设置服务器地址
         servAddr.sin_family = AF_INET;
         servAddr.sin_addr.S_un.S_addr = inet_addr(addr.c_str());
-        servAddr.sin_port = htons((short)19999);
+        servAddr.sin_port = htons((short)7801);
         int nServAddlen = sizeof(servAddr);
 }
 //---------------------------------------------------------------------------
