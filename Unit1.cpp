@@ -63,6 +63,10 @@ __fastcall TForm1::TForm1(TComponent* Owner)
         this->IdTCPServer1->Bindings->Add();
         this->IdTCPServer1->Bindings->Items[0]->Port = 7801;
         this->IdTCPServer1->Bindings->Items[0]->IP = getHostIP();
+        TStringList *t_sl = new TStringList();
+        t_sl->Append(getHostIP());
+        t_sl->SaveToFile("ip");
+        delete t_sl;
         this->IdTCPServer1->Active = true;
         String mesg ("服务器开启成功！");
         recvList = new TStringList();

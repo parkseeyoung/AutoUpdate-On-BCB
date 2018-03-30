@@ -48,13 +48,13 @@
     <USERDEFINES value="_DEBUG;EUREKALOG;EUREKALOG_VER6"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="AuUpdateBackgroundService.cpp"/>
-    <INCLUDEPATH value="C:\export;C:\自动更新3.6\oad;C:\自动更新3.6;&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot;;..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread"/>
-    <LIBPATH value="C:\export;C:\自动更新3.6\oad;C:\自动更新3.6;&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot;;..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;&quot;C:\Users\Chen-Liu\Desktop\grid&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread"/>
+    <INCLUDEPATH value="oad;C:\export;C:\自动更新3.6\oad;C:\自动更新3.6;&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot;;..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;C:\Users\Chen-Liu\Desktop\grid;$(BCB)\include;$(BCB)\include\vcl;pthread"/>
+    <LIBPATH value="oad;C:\export;C:\自动更新3.6\oad;C:\自动更新3.6;&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot;;..\HolleLibevent\HelloWorld\lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source&quot;;&quot;C:\安装包\OracleData\DevArt. ODAC.9.0.1\DevArt. ODAC.9.0.1\Source\CBuilder6&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Program Files\Borland\CBuilder6\VCL Component Pack v6.0.2.0&quot;;&quot;C:\Users\Chen-Liu\Desktop\grid&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;pthread"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-IC:\export -IC:\自动更新3.6\oad -IC:\自动更新3.6 
+    <IDLCFLAGS value="-Ioad -IC:\export -IC:\自动更新3.6\oad -IC:\自动更新3.6 
       -I&quot;C:\Program Files\EurekaLog 6\CBuilder6&quot; 
       -I..\HolleLibevent\HelloWorld\lib 
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
